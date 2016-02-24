@@ -1,4 +1,4 @@
-<?
+<?php
 	error_reporting(E_ALL);
 	ini_set('display_errors', '1');
 
@@ -24,7 +24,7 @@
 
 		<!-- Demo Resources -->
 		<link href="http://formstone.it/css/demo.css" rel="stylesheet" type="text/css" media="all">
-		<script src="http://formstone.it/js/demo.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 
 		<!--[if IE 8]>
         	<script>var IE8 = true;</script>
@@ -67,12 +67,12 @@
 					<a href="about.php">About</a>
 				</nav>
 				<div id="pronto">
-<?
+<?php
 	}
 	// END: Only output on full page loads
 ?>
 
-			<?
+			<?php
 				// Always output
 				if ($isPronto) {
 					// If pronto request, save content to buffer
@@ -84,7 +84,7 @@
 			<p>Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 			<p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
 			<p>Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-			<?
+			<?php
 				if ($isPronto) {
 					// If pronto request, return json object with page pieces
 					$page_content = ob_get_clean();
@@ -96,7 +96,7 @@
 				// END: Always output
 			?>
 
-<?
+<?php
 	// Only output on full page loads
 	if (!$isPronto) {
 ?>
@@ -111,7 +111,7 @@
 		</footer>
 	</body>
 </html>
-<?
+<?php
 	}
 	// END: Only output on full page loads
 
